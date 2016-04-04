@@ -1,5 +1,10 @@
 Node Module that converts XML to JSON using C++
 
+
+## Notice: for now package support only node.js v0.10.*
+### support node.js v0.12.* , v4.* , v5.* coming soon
+
+
 ## Install
 
 Install fast-xml2json package  
@@ -12,7 +17,7 @@ Install fast-xml2json package
 ## Use Async Convertor xml files to json files
 
 ```js
-var xml2json=require('xml2json');
+var xml2json = require('xml2json');
 
 xml2json.convertFile(xmlFilePath, jsonFilePath, callback);
 ```
