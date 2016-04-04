@@ -1,6 +1,6 @@
 {
   "name": "fast-xml2json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "C++ addon to convert xml files to json files",
   "main": "index.js",
   "scripts": {
