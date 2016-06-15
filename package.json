@@ -1,6 +1,6 @@
 {
   "name": "fast-xml2json",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "C++ addon to convert xml files to json files or json sting",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,10 @@
   },
   "keywords": [
     "xml2json",
+    "xmltojson",
+    "xml-to-json",
+    "xml-conv-json",
+    "converter",
     "c++",
     "addon",
     "xml",
