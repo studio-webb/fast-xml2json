@@ -1,0 +1,8 @@
+#ifndef CONVERT_XML_FILE_TO_JSON_FILE_ASYNC_H_
+#define CONVERT_XML_FILE_TO_JSON_FILE_ASYNC_H_
+
+#include <nan.h>
+
+NAN_METHOD(ConvertToFile);
+
+#endif // CONVERT_XML_FILE_TO_JSON_FILE_ASYNC_H_

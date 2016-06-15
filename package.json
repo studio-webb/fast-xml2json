@@ -1,7 +1,7 @@
 {
   "name": "fast-xml2json",
-  "version": "1.0.1",
-  "description": "C++ addon to convert xml files to json files",
+  "version": "2.0.1",
+  "description": "C++ addon to convert xml files to json files or json sting",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/studio-webb/fast-xml2json/issues"
   },
-  "homepage": "https://github.com/studio-webb/fast-xml2json#readme"
+  "homepage": "https://github.com/studio-webb/fast-xml2json#readme",
+  "dependencies": {
+    "nan": "^2.3.5"
+  }
 }

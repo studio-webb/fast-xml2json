@@ -3,19 +3,17 @@
         {
             "target_name": "xml2json",
             "sources": [
-                "src/xml2json.cc"
+                "src/addon.cc",
+                "src/tofile.cc",
+                "src/tojson.cc",
+                "src/include/xml2json.cc"
             ],
             "include_dirs": [
-                "./src/include/"
+                "./src/include/",
+                "<!(node -e \"require('nan')\")"
             ],
-            "cflags!": [ "-fno-exceptions" ],
-            "cflags_cc!": [ "-fno-exceptions" ],
-            "cflags": [
-                "-std=c++11",
-                "-O3",
-                "-fdata-sections",
-                "-ffunction-sections"
-            ],
+            "cflags": [ "-fno-rtti" ],
+            "cflags_cc!": [ "-fno-rtti" ],
             "conditions": [
                 ["OS==\"win\"", {
 
