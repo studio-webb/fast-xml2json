@@ -46,14 +46,22 @@ void to_array_form(const char *name, rapidjson::Value &jsvalue, rapidjson::Value
 
 void add_attributes(rapidxml::xml_node<> *xmlnode, rapidjson::Value &jsvalue, rapidjson::Document::AllocatorType& allocator)
 {
+    jsvalue.SetObject();
+    rapidjson::Value jsvalue_chd;
+    jsvalue_chd.SetObject();
+
     rapidxml::xml_attribute<> *myattr;
     for(myattr = xmlnode->first_attribute(); myattr; myattr = myattr->next_attribute())
     {
-        rapidjson::Value jn, jv;
-        jn.SetString((std::string("@") + myattr->name()).c_str(), allocator);
-        jv.SetString(myattr->value(), allocator);
-        jsvalue.AddMember(jn, jv, allocator);
+        rapidjson::Value _jn, _jv;
+        _jn.SetString(myattr->name(), allocator);
+        _jv.SetString(myattr->value(), allocator);
+        jsvalue_chd.AddMember(_jn, _jv, allocator);
     }
+
+    rapidjson::Value jn, jv;
+    jn.SetString("a", allocator);
+    jsvalue.AddMember(jn, jsvalue_chd, allocator);
 }
 
 void traverse_node(rapidxml::xml_node<> *xmlnode, rapidjson::Value &jsvalue, rapidjson::Document::AllocatorType& allocator)
